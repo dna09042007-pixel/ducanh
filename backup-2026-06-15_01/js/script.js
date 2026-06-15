@@ -57,7 +57,7 @@ function renderCart() {
     if (!cartItems.length) {
         cartContent.innerHTML = '<div class="empty">Giỏ hàng của bạn hiện đang rỗng.</div>';
         const trackingInfo = document.getElementById('trackingInfo');
-        if (trackingInfo) trackingInfo.textContent = 'Chưa có sản phẩm nào được thêm vào giỏ hàng.';
+        if (trackingInfo) trackingInfo.textContent = 'Chưa có Acc nào được thêm vào giỏ hàng.';
         return;
     }
 
