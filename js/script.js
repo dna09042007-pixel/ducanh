@@ -109,7 +109,7 @@ function buyNow(id) {
 
     const currentBalance = getCurrentUserBalance();
     if (currentBalance < product.price) {
-        alert('Số dư không đủ. Vui lòng nạp thêm tiền để mua sản phẩm này.');
+        alert('Số dư không đủ. Vui lòng nạp thêm tiền để mua Acc này.');
         return;
     }
 
