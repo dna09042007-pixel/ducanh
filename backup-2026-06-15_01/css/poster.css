@@ -1,0 +1,46 @@
+.poster-hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 24px 0;
+    padding: 24px;
+}
+
+.poster-content {
+    background: rgba(15, 23, 42, 0.55);
+    color: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 800px;
+}
+
+.poster-content h1 {
+    font-size: 2.8rem;
+    margin: 0 0 12px;
+}
+
+.poster-content p {
+    margin: 0 0 16px;
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #ff6b6b;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.btn-primary:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sản phẩm - Siêu thị đồ gia dụng</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMyfhT3JraHYocKn4AHQWmWkL74jH20vujgkunbOzaHg&s=10" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <nav class="top-nav">
+                <a href="index.html">Trang chủ</a>
+                <a href="products.html">Sản phẩm</a>
+                <button id="themeToggle" class="theme-toggle" title="Chế độ tối/sáng" aria-label="Chuyển đổi chế độ">🌙</button>
+            </nav>
+            <h1>Danh mục sản phẩm</h1>
+            <p>Chọn sản phẩm yêu thích và thêm vào giỏ hàng.</p>
+        </header>
+
+        <div class="layout">
+            <section class="products">
+                <h2 class="section-title">Sản phẩm</h2>
+                <div class="product-list" id="productList"></div>
+            </section>
+
+            <aside class="cart">
+                <h2 class="section-title">Giỏ hàng</h2>
+                <div id="cartContent"></div>
+                <div class="tracking">
+                    <strong>Theo dõi sản phẩm</strong>
+                    <p id="trackingInfo">Chưa có sản phẩm nào được thêm vào giỏ hàng.</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <div class="support-widget" id="supportWidget" aria-hidden="false">
+        <div class="support-handle" title="Kéo để di chuyển">
+            <img class="support-avatar" src="https://phukiennillkin.com/wp-content/uploads/2026/03/avatar-mac-dinh-facebook-6.jpg" alt="Hỗ trợ" />
+        </div>
+        <a class="support-item" href="mailto:hotro@example.com" title="Email hỗ trợ">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#2563eb" d="M2 6a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm4-.5L12 11l6-5.5V6l-6 5-6-5V5.5z"/></svg>
+        </a>
+        <a class="support-item support-contact" href="#" data-number="0978****48" title="Xem số điện thoại">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#14b8a6" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.01l-2.2 2.21z"/></svg>
+        </a>
+    </div>
+</body>
+</html>

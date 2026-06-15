@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lịch sử mua hàng - Shopducanh.com</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/poster.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <div class="page poster-page">
+        <header class="site-header">
+            <nav class="top-nav">
+                <a class="brand" href="index.html">Shopducanh.com</a>
+                <div class="nav-links">
+                    <a href="index.html">Trang chủ</a>
+                    <a href="products.html">Sản phẩm</a>
+                </div>
+                <div class="nav-right-links">
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" onclick="toggleHistoryDropdown()">Lịch sử giao dịch ▼</button>
+                        <div class="nav-dropdown-menu" id="historyDropdown">
+                            <a href="purchase-history.html">Lịch sử mua acc</a>
+                            <a href="recharge-history.html">Lịch sử nạp tiền</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="history-page">
+            <div class="history-page-header">
+                <h1>Lịch sử giao dịch</h1>
+                <p>Chọn mục để xem lịch sử của bạn</p>
+            </div>
+
+            <div style="text-align: center; padding: 60px 20px;">
+                <p style="font-size: 1.1rem; color: rgba(226, 232, 240, 0.8); margin-bottom: 30px;">Hãy chọn từ menu bên phải để xem lịch sử mua acc hoặc nạp tiền</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="purchase-history.html" class="btn-primary">Lịch sử mua acc</a>
+                    <a href="recharge-history.html" class="btn-primary">Lịch sử nạp tiền</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        function toggleHistoryDropdown() {
+            const dropdown = document.getElementById('historyDropdown');
+            dropdown.classList.toggle('active');
+            
+            document.addEventListener('click', function closeDropdown(e) {
+                const nav = document.querySelector('.nav-dropdown');
+                if (!nav || !nav.contains(e.target)) {
+                    dropdown.classList.remove('active');
+                    document.removeEventListener('click', closeDropdown);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lịch sử mua acc - Shopducanh.com</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/poster.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <div class="page poster-page">
+        <header class="site-header">
+            <nav class="top-nav">
+                <a class="brand" href="index.html">Shopducanh.com</a>
+                <div class="nav-links">
+                    <a href="index.html">Trang chủ</a>
+                    <a href="products.html">Sản phẩm</a>
+                </div>
+                <div class="nav-right-links">
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" onclick="toggleHistoryDropdown()">Lịch sử giao dịch ▼</button>
+                        <div class="nav-dropdown-menu" id="historyDropdown">
+                            <a href="purchase-history.html">Lịch sử mua acc</a>
+                            <a href="recharge-history.html">Lịch sử nạp tiền</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="history-page">
+            <div class="history-page-header">
+                <h1>Lịch sử mua acc</h1>
+                <p>Xem lại tất cả các acc bạn đã mua</p>
+            </div>
+
+            <div id="purchaseList" class="history-list">
+                <p class="history-empty">Hiện chưa có lịch sử mua hàng.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        function toggleHistoryDropdown() {
+            const dropdown = document.getElementById('historyDropdown');
+            dropdown.classList.toggle('active');
+            
+            document.addEventListener('click', function closeDropdown(e) {
+                const nav = document.querySelector('.nav-dropdown');
+                if (!nav || !nav.contains(e.target)) {
+                    dropdown.classList.remove('active');
+                    document.removeEventListener('click', closeDropdown);
+                }
+            });
+        }
+
+        window.addEventListener('load', () => {
+            if (!isLoggedIn()) {
+                document.getElementById('purchaseList').innerHTML = '<p class="history-empty">Vui lòng <a href="index.html">đăng nhập</a> để xem lịch sử mua hàng.</p>';
+                return;
+            }
+            
+            loadPurchaseHistory();
+        });
+        
+        function loadPurchaseHistory() {
+            const purchaseList = document.getElementById('purchaseList');
+            // Placeholder: Chưa có chức năng lưu lịch sử mua acc
+            purchaseList.innerHTML = '<p class="history-empty">Hiện chưa có lịch sử mua hàng.</p>';
+        }
+    </script>
+</body>
+</html>
